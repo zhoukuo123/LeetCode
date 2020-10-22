@@ -8,6 +8,7 @@ package 数组;
  */
 public class _面试题_16_16_部分排序 {
     public int[] subSort(int[] array) {
+        // 时间复杂度O(n)
         if (array.length == 0) return new int[]{-1, -1};
         // 从左扫描到右寻找逆序对(正序: 逐渐变大)
         int max = array[0];

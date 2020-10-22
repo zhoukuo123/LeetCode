@@ -7,6 +7,7 @@ package 数组;
  */
 public class _88_合并两个有序数组 {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
+        // 时间复杂度O(n)
         int i1 = m - 1;
         int i2 = n - 1;
         int cur = m + n - 1;
