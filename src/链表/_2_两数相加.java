@@ -8,7 +8,7 @@ package 链表;
  */
 public class _2_两数相加 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        // O(n)
+        // 时间复杂度O(n)
         if (l1 == null) return l2;
         if (l2 == null) return l1;
 

@@ -8,7 +8,8 @@ package 链表;
  */
 public class _86_分隔链表 {
     public ListNode partition(ListNode head, int x) {
-        // O(n)
+        // 时间复杂度O(n)
+        // 空间复杂度O(1)
         if (head == null) return null;
         ListNode lHead = new ListNode(0);
         ListNode lTail = lHead;
