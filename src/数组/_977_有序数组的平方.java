@@ -15,7 +15,7 @@ public class _977_有序数组的平方 {
          * [1, -3, -2, -3]
          * [1, -3, -2 ,-3]
          * [1, -2, -3, -3]
-         * O(n^2)
+         * 时间复杂度O(n^2)
          */
         int r = A.length - 1;
 
@@ -45,7 +45,7 @@ public class _977_有序数组的平方 {
 
     public int[] sortedSquares2(int[] A) {
         // 直接将数组A中的数平方后直接排序
-        // O(nlogn)
+        // 时间复杂度O(nlogn)
         for (int i = 0; i < A.length; i++) {
             A[i] = A[i] * A[i];
         }
@@ -55,7 +55,7 @@ public class _977_有序数组的平方 {
 
     public int[] sortedSquares3(int[] A) {
         // 双指针
-        // O(n)
+        // 时间复杂度O(n)
         int[] result = new int[A.length];
         int k = A.length - 1;
         int l = 0;
