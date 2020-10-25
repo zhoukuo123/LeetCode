@@ -22,16 +22,22 @@ public class _234_回文链表 {
         // 翻转右半部分(中间节点的右边部分)
         ListNode rHead = reverseList(mid.next);
         ListNode lHead = head;
+        ListNode rOldHead = rHead;
 
         // 从lHead, rHead出发, 判断是否为回文链表
+        boolean result = true;
         while (rHead != null) {
             if (rHead.val != lHead.val) {
-                return false;
+                result = false;
+                break;
             }
             rHead = rHead.next;
             lHead = lHead.next;
         }
-        return true;
+
+        // 恢复右半部分(对右半部分再次翻转)
+        reverseList(rOldHead);
+        return result;
     }
 
     /**
@@ -40,14 +46,11 @@ public class _234_回文链表 {
      * 比如 1>2>2>1中左边第一个2是中间节点
      */
     private ListNode middleNode(ListNode head) {
-        ListNode fast = head.next;
+        ListNode fast = head;
         ListNode slow = head;
-        while (fast.next != null) {
+        while (fast.next != null && fast.next.next != null) {
             fast = fast.next.next;
             slow = slow.next;
-            if (fast == null) {
-                break;
-            }
         }
         return slow;
     }
