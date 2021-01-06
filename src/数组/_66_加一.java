@@ -15,9 +15,6 @@ public class _66_加一 {
                     if (i == 0) {
                         int[] newArray = new int[digits.length + 1];
                         newArray[0] = 1;
-                        for (int j = 0; j < digits.length; j++) {
-                            newArray[j + 1] = digits[j];
-                        }
                         digits = newArray;
                     }
                 } else {
