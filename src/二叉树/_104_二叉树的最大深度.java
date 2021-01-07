@@ -3,6 +3,9 @@ package 二叉树;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/
+ */
 public class _104_二叉树的最大深度 {
     // 递归
     public int maxDepth(TreeNode root) {
