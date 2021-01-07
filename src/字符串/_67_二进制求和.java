@@ -1,4 +1,4 @@
-package 位运算;
+package 字符串;
 
 /**
  * https://leetcode-cn.com/problems/add-binary/
