@@ -55,6 +55,12 @@ public class _234_回文链表 {
         return slow;
     }
 
+    /**
+     * 翻转链表
+     *
+     * @param head 原链表的头结点
+     * @return 翻转之后链表的头结点
+     */
     private ListNode reverseList(ListNode head) {
         ListNode newHead = null;
         while (head != null) {
