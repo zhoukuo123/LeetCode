@@ -7,7 +7,7 @@ package 分治;
  */
 public class _53_最大子数组和 {
 
-    // 分治: 时间复杂度O(), 空间复杂度O()
+    // 分治b
     public int maxSubArray(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
@@ -21,7 +21,7 @@ public class _53_最大子数组和 {
      * T(n) = T(n/2) + T(n/2) + O(n)
      * T(n) = 2T(n/2) + O(n)
      * logba = 1 d = 1
-     * T(n) = nlogn
+     * 时间复杂度T(n) = nlogn
      */
     public int maxSubArray(int[] nums, int begin, int end) {
         if (end - begin < 2) {
