@@ -12,15 +12,30 @@ public class _26_删除排序数组中的重复项 {
     当我们遇到 nums[j] != nums[i]时，跳过重复项的运行已经结束，因此我们必须把 nums[j] 的值复制到 nums[i + 1]。然后递增 i，接着我们将再次重复相同的过程，直到 j 到达数组的末尾为止。
      */
     public int removeDuplicates(int[] nums) {
-        if (nums.length == 0) return 0;
-        int i = 0;
-        for (int j = 1; j < nums.length; j++) {
-            if (nums[j] != nums[i]) {
-                nums[i + 1] = nums[j];
-                i++;
+        if (nums.length == 0) {
+            return 0;
+        }
+        int slow = 0;
+        for (int fast = 1; fast < nums.length; fast++) {
+            if (nums[slow] == nums[fast]) {
+                continue;
+            } else {
+                nums[slow + 1] = nums[fast];
+                slow++;
             }
         }
-        return i + 1;
+        return slow + 1;
+
+
+//        if (nums.length == 0) return 0;
+//        int i = 0;
+//        for (int j = 1; j < nums.length; j++) {
+//            if (nums[j] != nums[i]) {
+//                nums[i + 1] = nums[j];
+//                i++;
+//            }
+//        }
+//        return i + 1;
     }
 
     // 时间复杂度 O(n^2)
