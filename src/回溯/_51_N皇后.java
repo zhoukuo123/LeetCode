@@ -4,6 +4,9 @@ import java.util.List;
 
 /**
  * @author CoderZk
+ *
+ * https://leetcode-cn.com/problems/n-queens/
+ * https://leetcode-cn.com/problems/n-queens-ii/
  */
 public class _51_N皇后 {
     /**
